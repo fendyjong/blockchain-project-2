@@ -19,7 +19,6 @@ class Blockchain {
 	// you will need to set this up statically or instead you can verify if the height !== 0 then you
 	// will not create the genesis block
 	async generateGenesisBlock() {
-		// Add your code here
 		// get height from db
 		const genesisBlock = new Block.Block('Genesis block');
 		const height = await this.getBlockHeight();
@@ -76,7 +75,6 @@ class Blockchain {
 
 	// Validate Blockchain
 	async validateChain() {
-		// Add your code here
 		// Loop through all blocks in the chain
 		const lastHeight = await this.getBlockHeight();
 		const promises = [];

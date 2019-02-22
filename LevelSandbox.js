@@ -63,8 +63,6 @@ class LevelSandbox {
 				});
 		});
 	}
-
-
 }
 
 module.exports.LevelSandbox = LevelSandbox;
