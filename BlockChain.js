@@ -37,6 +37,12 @@ class Blockchain {
 		// block height
 		block.height = await this.getBlockHeight();
 
+		if (block.height === 0) {
+			// Create Genesis Block if not created
+			await this.generateGenesisBlock();
+			block.height++;
+		}
+
 		// UTC timestamp
 		block.timeStamp = new Date().getTime().toString().slice(0, -3);
 		if (block.height > 0) {
